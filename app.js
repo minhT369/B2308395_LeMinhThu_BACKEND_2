@@ -6,8 +6,8 @@ const ApiError = require("./app/api-error");
 const app = express();
 
 app.use(cors());
-app.use("/api/contacts", contactsRouter);
 app.use(express.json());
+app.use("/api/contacts", contactsRouter);
 
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to contact book application." });
